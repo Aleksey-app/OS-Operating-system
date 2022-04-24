@@ -33,5 +33,5 @@ int main(){
              }else if (WIFSTOPPED(status)) {
                  cout << "\n\x1B[0;31;40mprog: Дочерний процесс завершился с кодом: " << WSTOPSIG(status) <<"\x1b[0m" << endl;}
          }   
- return 0;   
+ return 0;  
 }
