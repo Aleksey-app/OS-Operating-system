@@ -25,7 +25,6 @@ int main(){
          }else{
              cout << "\n\x1B[0;31;40mprog: Родительский процесс PID: " << getpid() <<"\x1b[0m" << endl;
              int status = 0;                                // результат завершения дочернего процесса
-             int check = 0;
              while (waitpid(lab4, &status, WNOHANG) == 0) {
                  cout << "\x1B[0;31;40mЖдём"<<"\x1b[0m" << endl;
                  sleep(1);}
