@@ -4,6 +4,10 @@
 using std::cout;
 using std::endl;
 int main(){
+    char* var = "Path=/полный путь//test";                  //изменяет значение переменной окружения или добавляет к ней новое.
+    if (putenv(var) == -1) {
+        perror("putenv[-]");
+         exit(EXIT_FAILURE);}
     const char* file = "lab4";                              
     int error = 0;
     const char* ar = "test";
