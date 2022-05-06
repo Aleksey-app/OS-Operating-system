@@ -31,12 +31,13 @@
 7. Программа 2 должна ожидать завершения дочернего процесса, проверяя событие завершения каждую половину секунды, а по завершению дочернего процесса вывести на экран код завершения.
 8. Программа 2 будет выполнять роль родительского процесса. 
 ### Вариант функции exec()  Функция, загружает и запускает другие программы.
-```c    int execve(const char *pathname, char *const argv [], char *const envp[]);
-    int execl(const char *pathname, const char *arg, ...),
-    int execlp(const char *file, const char *arg, ...),
-    int execle(const char *pathname, const char *arg,..., char * const envp[]),
-    int execv(const char *pathname, char *const argv[]),
-    int execvp(const char *file, char *const argv[]),
+```c    
+    int execve(const char *pathname, char *const argv [], char *const envp[]);
+    int execl(const char *pathname, const char *arg, ...);
+    int execlp(const char *file, const char *arg, ...);
+    int execle(const char *pathname, const char *arg,..., char * const envp[]);
+    int execv(const char *pathname, char *const argv[]);
+    int execvp(const char *file, char *const argv[]);
     int execvpe(const char *file, char *const argv[], char *const envp[])
 ```
 **При реализации задания необходимо учесть особенности варианта функции execlp()**
