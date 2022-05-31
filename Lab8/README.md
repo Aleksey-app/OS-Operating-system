@@ -36,3 +36,18 @@ struct sockaddr {
     char              sa_data[14];  // 14 байтов для хранения адреса
 };
 ```
+Поле sa_family содержит идентификатор домена, тот же, что и первый параметр функции socket. В зависимости от значения этого поля по-разному интерпретируется содержимое массива sa_data. Разумеется, работать с этим массивом напрямую не очень удобно, поэтому вы можете использовать вместо sockaddr одну из альтернативных структур вида sockaddr_XX (XX - суффикс, обозначающий домен: "un" - Unix, "in" - Internet и т. д.). 
+```c
+struct sockaddr_in {
+    short int          sin_family;  // Семейство адресов
+    unsigned short int sin_port;    // Номер порта
+    struct in_addr     sin_addr;    // IP-адрес
+    unsigned char      sin_zero[8]; // "Дополнение" до размера структуры sockaddr
+};
+```
+Здесь поле sin_family соответствует полю sa_family в sockaddr, в sin_port записывается номер порта, а в sin_addr - IP-адрес хоста. Поле sin_addr само является структурой, которая имеет вид:
+```c
+struct in_addr {
+    unsigned long s_addr;
+};
+```
