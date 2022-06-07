@@ -157,3 +157,6 @@ struct hostent *gethostbyname(const char *name);
 
 ![server](https://user-images.githubusercontent.com/71906604/172451624-2afa36c2-3918-496d-96e4-253e25a174aa.png)
 
+**Клиент**
+
+![client](https://user-images.githubusercontent.com/71906604/172452171-99f702d4-1741-4065-a822-39ae9a4c2ad5.png)
